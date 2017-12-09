@@ -31,7 +31,7 @@
     "@ckeditor/ckeditor5-theme-lark": "^1.0.0-alpha.2",
     "@ckeditor/ckeditor5-upload": "^1.0.0-alpha.2",
     "babel-minify-webpack-plugin": "^0.2.0",
-    "postcss-loader": "^2.0.8",
+    "postcss-loader": "^2.0.9",
     "raw-loader": "^0.5.1",
     "style-loader": "^0.18.2",
     "webpack": "^3.6.0",
@@ -54,5 +54,8 @@
     "create-entry-file": "node bin/create-entry-file.js",
     "build-ckeditor": "sh bin/build-ckeditor.sh",
     "preversion": "npm run build; if [ -n \"$(git status src/ckeditor.js build/ --porcelain)\" ]; then git add -u src/ckeditor.js build/ && git commit -m 'Internal: Build.'; fi"
+  },
+  "dependencies": {
+    "cssnano": "^3.10.0"
   }
 }

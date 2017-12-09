@@ -33,9 +33,9 @@ module.exports = {
 			language: buildConfig.config.language,
 			additionalLanguages: 'all'
 		} ),
-		new BabiliPlugin( null, {
-			comments: false
-		} ),
+		// new BabiliPlugin( null, {
+		// 	comments: false
+		// } ),
 		new webpack.BannerPlugin( {
 			banner: bundler.getLicenseBanner(),
 			raw: true
@@ -62,7 +62,7 @@ module.exports = {
 						loader: 'postcss-loader',
 						options: getPostCssConfig( {
 							themeImporter: {
-								themePath: require.resolve( '@ckeditor/ckeditor5-theme-lark' )
+								themePath: './node_modules/@ckeditor/ckeditor5-theme-lark'
 							},
 							minify: true
 						} )
